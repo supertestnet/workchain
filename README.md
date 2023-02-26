@@ -53,5 +53,7 @@ Consequently, workchains are not trustless. They rely on incentives toward non-t
 # Acknowledgements
 
 Robin Linus for [showing](https://gist.github.com/RobinLinus/95de641ed1e3d9fde83bdcf5ac289ce9) that it is possible to express and verify proof of work within bitcoin script today.
+
 Ruben Somsen for bitcoin wizardry and maintaining a helpful Telegram group of other fellow wizards.
+
 Vman for maintaining my interest in worklocks and talking through [ideas](https://github.com/VzxPLnHqr/sig-pow#user-content-fnref-precision_note2-4ba98315fde2e55b0754b9c46ef44753) for how to make a sidechain with them.
