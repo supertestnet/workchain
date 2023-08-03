@@ -50,6 +50,14 @@ The existence of trolls may result in the following scenario: even though no one
 
 Consequently, workchains are not trustless. They rely on incentives toward non-troll behavior. Thus workchain users might feel a bit of suspense, hoping that if/when a troll comes along to try to steal coins for the sake of wreaking havoc, at least (hopefully) it’s unlikely that they’ll do that right when you are next in line to withdraw. I don’t know how to solve this problem but maybe this sidechain model is good enough even with this flaw that I can leave it unsolved for now.
 
+# The secret sauce and the boostrapping problem
+
+The secret sauce of workchain is this: if it the value of each deposit is only $50 and the cost to move it is $2000, miners are unlikely to steal it (because they would lose money by doing so), but they probably *would* move it to earn a *right to withdraw* more than $2000 from the workchain in transaction fees. So we leverage that incentive to make the workchain *assign* miners transaction fees when they mine blocks properly. Miners can then withdraw their earnings at their leisure.
+
+However, this incentive model introduces a bootstrapping problem: blocks on the sidechain *cost* at least $2000 to mine, therefore miners will only do so if they earn more than that in revenue. And, since there is no coinbase reward, that revenue must all come from transaction fees. But it's *hard* for a blockchain to get so popular that its miners earn $2000 in transaction fees per block. Your blockchain has to have a lot of usage, and, at least in the beginning stages, they usually don't.
+
+To compensate for this problem, perhaps the sidechain's developers could *start it out* as a standard, federated sidechain, but shift to the workchain model when transaction fees regularly exceed $2000 per block. That might work, but, if the federation holds a lot of money, they might not *want* to make the shift when the time comes. Moreover, if liquid and rsk are any indication, getting enough users to pay $2000 per block in transaction fees may never happen. So the bootstrapping problem may just be insurmountable.
+
 # Acknowledgements
 
 Robin Linus for [showing](https://gist.github.com/RobinLinus/95de641ed1e3d9fde83bdcf5ac289ce9) that it is possible to express and verify proof of work within bitcoin script today.
