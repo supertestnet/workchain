@@ -52,7 +52,7 @@ Consequently, workchains are not trustless. They rely on incentives toward non-t
 
 # The secret sauce and the boostrapping problem
 
-The secret sauce of workchain is this: if the value of each deposit is only $50 and the cost to move it is $2000, miners are unlikely to steal it (because they would lose money by doing so), but they probably *would* move it to earn a *right to withdraw* more than $2000 from the workchain in transaction fees. So we leverage that incentive to make the workchain *assign* miners transaction fees when they mine blocks properly. Miners can then withdraw their earnings at their leisure.
+The secret sauce of workchain is this: if the value of each deposit is only $50 and the cost to move it is $2000, miners are unlikely to steal it because they would lose money by doing so, but they probably *would* move it to earn a *right to withdraw* more than $2000 from the workchain in transaction fees. So we leverage that incentive to make the workchain *assign* miners transaction fees when they mine blocks properly. Miners can then withdraw their earnings at their leisure.
 
 However, this incentive model introduces a bootstrapping problem: blocks on the sidechain *cost* at least $2000 to mine, therefore miners will only do so if they earn more than that in revenue. And, since there is no coinbase reward, that revenue must all come from transaction fees. But it's *hard* for a blockchain to get so popular that its miners earn $2000 in transaction fees per block. Your blockchain has to have a lot of usage, and, at least in the beginning stages, they usually don't.
 
